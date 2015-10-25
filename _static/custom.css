@@ -16,3 +16,7 @@
 .rst-content .exercise p:last-child {
   margin-bottom: 0;
 }
+
+.fluid-width-video-wrapper {
+  margin: 32px 0;
+}
