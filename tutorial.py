@@ -10,9 +10,12 @@ def setup(app):
                  html=(visit_exercise, depart_exercise))
     app.add_node(exercisehint,
                  html=(visit_hint, depart_hint))
+    app.add_node(youtube,
+                 html=(visit_youtube, depart_youtube))
 
     app.add_directive('exercise', ExerciseDirective)
     app.add_directive('exercisehint', ExerciseHintDirective)
+    app.add_directive('youtube', YouTubeDirective)
 
     return {'version': '0.1'}   # identifies the version of our extension
 
@@ -62,3 +65,32 @@ class ExerciseHintDirective(Directive):
                                                   self.lineno)
         subnode.extend(inodes)
         return [subnode] + messages
+
+## youtube directive
+
+# Inspired by this extension:
+# https://github.com/shomah4a/sphinxcontrib.youtube/blob/master/sphinxcontrib/youtube/youtube.py
+
+class youtube(nodes.General, nodes.TextElement):
+    pass
+
+def visit_youtube(self, node):
+    url = 'https://www.youtube.com/embed/' + node.video_id
+    self.body.append('<iframe src="%s" frameborder="0" allowfullscreen>' % url)
+
+def depart_youtube(self, node):
+    self.body.append('</iframe>')
+
+class YouTubeDirective(Directive):
+    has_content = False
+    required_arguments = 1
+    optional_arguments = 0
+    final_argument_whitespace = False
+    option_spec = {}
+
+    def run(self):
+        if not self.arguments:
+            return []
+        youtube_node = youtube()
+        youtube_node.video_id = self.arguments[0]
+        return [youtube_node]
