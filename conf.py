@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Sphinx Test documentation build configuration file, created by
+# Tutorial Boilerplate build configuration file, created by
 # sphinx-quickstart on Fri Oct 23 16:57:08 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Sphinx Test'
+project = u'Tutorial Boilerplate'
 copyright = u'2015, Feihong Hsu'
 author = u'Feihong Hsu'
 
@@ -207,7 +207,7 @@ html_show_copyright = False
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SphinxTestdoc'
+htmlhelp_basename = 'TutorialBoilerplatedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -229,7 +229,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'SphinxTest.tex', u'Sphinx Test Documentation',
+  (master_doc, 'TutorialBoilerplate.tex', u'Tutorial Boilerplate Documentation',
    u'Feihong Hsu', 'manual'),
 ]
 
@@ -259,7 +259,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinxtest', u'Sphinx Test Documentation',
+    (master_doc, 'tutorialboilerplate', u'Tutorial Boilerplate',
      [author], 1)
 ]
 
@@ -273,8 +273,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'SphinxTest', u'Sphinx Test Documentation',
-   author, 'SphinxTest', 'One line description of project.',
+  (master_doc, 'TutorialBoilerplate', u'Tutorial Boilerplate',
+   author, 'TutorialBoilerplate', 'One line description of project.',
    'Miscellaneous'),
 ]
 
