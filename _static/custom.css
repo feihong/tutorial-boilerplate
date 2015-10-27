@@ -20,3 +20,11 @@
 .fluid-width-video-wrapper {
   margin: 32px 0;
 }
+
+.exercise-hint.shown {
+  border: 1px dashed #4A4A4A;
+}
+
+.exercise-hint .hint-body {
+  padding: 10px;
+}
