@@ -100,6 +100,8 @@ Directives
 
     .. exercisehint:: Hello *hint*, you are a sight for **sore** eyes.
 
+        Second para of hint.
+
 .. image:: blobfish.jpg
     :width: 300
 
