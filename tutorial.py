@@ -6,10 +6,9 @@ from sphinx.locale import _
 
 
 def setup(app):
-   app.add_stylesheet('tutorial.css')
-   app.add_javascript('jquery.fitvids.js')
-   app.add_javascript('tutorial.js')
-
+    app.add_stylesheet('tutorial.css')
+    app.add_javascript('jquery.fitvids.js')
+    app.add_javascript('tutorial.js')
 
     app.add_node(exercise,
                  html=(visit_exercise, depart_exercise))
